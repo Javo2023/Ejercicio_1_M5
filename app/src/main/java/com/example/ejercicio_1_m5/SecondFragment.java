@@ -68,10 +68,15 @@ public class SecondFragment extends Fragment {
         binding = FragmentSecondBinding.inflate(getLayoutInflater(),container,false);
 
 
-        binding.btnFinish.setOnClickListener(v ->{});
+        binding.btnFinish.setOnClickListener(v ->{
+            FragmentManager fm = getActivity().getSupportFragmentManager();
+            fm.popBackStack();
+        });
 
         binding.webSite.loadUrl(mParam1);
         return binding.getRoot();
+
+
 
 
 
